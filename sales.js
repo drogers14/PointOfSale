@@ -1,15 +1,28 @@
 var runningTotal = 0.0;
 
+
 function addItem()
 {
   var newItem;
   newItem = document.getElementById("price").value;
+
+  //IF newItem is not a number
+  // THEN show an alert: "Enter price as a number"
   if(isNaN(newItem)){
     window.alert("Enter price as a number")
   }
-  //IF newItem is not a number
-  // THEN show an alert: "Enter price as a number"
-//  else if()
+
+else{
+newItem =  Number(newItem);
+
+runningTotal+= newItem;
+ var dollars = asCurrency(runningTotal)
+ document.getElementById("subtotal").innerHTML=dollars;
+   newItem = document.getElementById("price").value= "";
+ setCookie(preTax , runningTotal , 3)
+ }
+
+ //var runningTotal =
   //OTHERWISE,
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
@@ -47,4 +60,6 @@ function getCookie(cname) {
         }
     }
     return "";
+
 }
+//function preTax(runningTotal){}
