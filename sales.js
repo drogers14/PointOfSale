@@ -4,8 +4,12 @@ function addItem()
 {
   var newItem;
   newItem = document.getElementById("price").value;
+  if(isNaN(newItem)){
+    window.alert("Enter price as a number")
+  }
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
+//  else if()
   //OTHERWISE,
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
