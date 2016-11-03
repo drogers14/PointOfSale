@@ -19,7 +19,7 @@ runningTotal+= newItem;
  var dollars = asCurrency(runningTotal);
  document.getElementById("subtotal").innerHTML=dollars;
    newItem = document.getElementById("price").value= "";
- setCookie("preTax" , runningTotal , 3)
+ setCookie("preTax" , runningTotal , 3);
  }
 
  //var runningTotal =
